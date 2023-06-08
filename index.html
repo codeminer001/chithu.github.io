@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <title>My Website</title>
+  <style>
+    body {
+      font-family: Monaco, monospace;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    header {
+      background-color: transparent;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h1 {
+      color: #f2f2f2;
+      margin: 0;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    nav li {
+      margin-left: 10px;
+    }
+
+    .login-button {
+      margin-left: 10px;
+    }
+
+    .login-button button {
+      background-color: transparent;
+      color: #f2f2f2;
+      padding: 5px 10px;
+      border: 2px solid rgba(242, 242, 242, 0.5); /* Decrease the alpha value to adjust the opacity */
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+      border-radius: 20px; /* Adjust the value to control the roundness of the buttons */
+    }
+
+    .login-button button:hover {
+      background-color: #f2f2f2;
+      color: #333;
+    }
+
+    section {
+      padding: 20px;
+      display: flex;
+      justify-content: space-between; /* Adjust alignment as per your preference */
+      align-items: center; /* Center items vertically */
+    }
+
+    footer {
+      background-color: transparent;
+      padding: 10px;
+    }
+
+    footer p {
+      color: #f2f2f2;
+    }
+
+    .text-container {
+      text-align: left;
+      margin-left: 120px; /* Add margin to create a larger gap from the left border */
+      position: relative;
+    }
+
+    .text-container h2,
+    .text-container h3,
+    .text-container p {
+      color: #ffffff;
+      text-align: center; /* Center align the text */
+      animation-duration: 10s; /* Set the duration of the animation */
+      animation-name: slideInFromLeft; /* Specify the name of the animation */
+      animation-fill-mode: forwards; /* Ensure the element retains the end state of the animation */
+    }
+
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100px); /* Start position of the element */
+        opacity: 0; /* Start opacity of the element */
+      }
+      100% {
+        transform: translateX(0); /* End position of the element */
+        opacity: 1; /* End opacity of the element */
+      }
+    }
+
+    .image-container {
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .social-icons {
+      position: absolute;
+      bottom: -40px; /* Adjust the position of the icons from the bottom */
+      left: 35%; /* Center the icons horizontally */
+      transform: translateX(-50%);
+      display: flex;
+      gap: 20px;
+      animation: popUp 15s forwards; /* Apply the pop-up animation */
+    }
+
+    .social-icons i {
+      font-size: 24px;
+      color: #fff;
+      background-color: #a17676;
+      padding: 10px;
+      border-radius: 50%;
+    }
+
+    .social-icons i:hover {
+      transform: scale(1.2);
+    }
+
+    @keyframes popUp {
+      0% {
+        opacity: 0;
+        transform: scale(0);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1><img src="icon.png" alt="Icon" height="40" width="40"> Chaitu</h1>
+    <nav>
+      <ul>
+        <li class="login-button"><button>Home</button></li>
+        <li class="login-button"><button id="aboutButton">About</button></li>
+        <li class="login-button"><button id="serviceButton">Services</button></li>
+        <li class="login-button"><button id="contactButton">Contact</button></li>
+        <li class="login-button"><button id="loginButton">Login</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <div class="text-container">
+      <h2>Welcome to My Website</h2>
+      <h3>weeaboo</h3>
+      <p>all options in wabpage are working try once</p>
+
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i> <!-- Instagram icon -->
+        <i class="fab fa-facebook-f"></i> <!-- Facebook icon -->
+        <i class="fas fa-share"></i> <!-- Share icon -->
+      </div>
+    </div>
+
+    <div class="image-container">
+      <img src="image.jpg" alt="Image">
+    </div>
+  </section>
+
+  <script>
+    document.getElementById("aboutButton").addEventListener("click", function() {
+      window.location.href = "about.html";
+    });
+
+    document.getElementById("loginButton").addEventListener("click", function() {
+      window.location.href = "login.html";
+    });
+
+    document.getElementById("serviceButton").addEventListener("click", function() {
+      window.location.href = "service.html";
+    });
+
+    document.getElementById("contactButton").addEventListener("click", function() {
+      window.location.href = "contact.html";
+    });
+
+  </script>
+</body>
+</html>
